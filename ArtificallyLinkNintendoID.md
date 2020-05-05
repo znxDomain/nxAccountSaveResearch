@@ -8,7 +8,7 @@ Requirements
 - Hekate/Nyx https://github.com/CTCaer/hekate
 - NinFS https://github.com/ihaveamac/ninfs
 - HexFiend http://ridiculousfish.com/hexfiend/
-
+- hactoolnet https://github.com/Thealexbarney/LibHac
 
 Step by Step
 ------
