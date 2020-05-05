@@ -24,3 +24,30 @@ save:/su/nas/[nasid].dat
 ## File Format
 
 See the Hex Fiend templates in this repo.
+
+Offset | Length | What
+-----  | -----  | -----
+0x0  | 0x8  | header
+0x8  | 0x8  | unused?
+
+User Blocks repeat following the intro:
+
+User Block is 200 (0xC8) byte
+
+Offset | Length | What
+----- | ------ | -----
+0x10 | 0x10 | user_id_1
+0x20 | 0x10 | user_id_2
+0x30 | 0x8  | last_edit_time
+0x38 | 0x20 | account_name
+0x58 | 0x4  | unknown
+0x5C | 0x4  | icon_id (0 = Mii, other = Characters)
+0x60 | 0x1  | background_color_id
+0x61 | 0x7  | unknown
+0x68 | 0x2C | mii_generation_specs?
+0x72 | 0x20 | previous_account_name? (null separated)
+0x94 | 0x30 | unknown
+
+8 users at the following offsets:
+- 0x10, 0xD8, 0x1A0, 0x268,
+  0x330, 0x3F8, 0x4C0, 0x58F
