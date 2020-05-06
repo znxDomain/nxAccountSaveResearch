@@ -38,7 +38,7 @@ Step by Step
    ```
    381CADFE 00001000 868A4F4D F389A8F7
    ```
-1. Add these file to your save structure
+1. Add these file to your save structure (see: Sample8000000000000010WithLinkedAccount.zip)
    ```
    save:/su/nas/f12e677eb4021a81_user.json
    save:/su/nas/f12e677eb4021a81_refresh.token
