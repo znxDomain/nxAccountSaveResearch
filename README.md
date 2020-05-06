@@ -25,6 +25,8 @@ save:/su/nas/[nasid].dat
 
 See the Hex Fiend templates in this repo.
 
+### profiles.dat
+
 Offset | Length | What
 -----  | -----  | -----
 0x0  | 0x8  | header
@@ -51,3 +53,19 @@ Offset | Length | What
 8 users at the following offsets:
 - 0x10, 0xD8, 0x1A0, 0x268,
   0x330, 0x3F8, 0x4C0, 0x58F
+
+### registry.dat
+
+Offset | Length | What
+-----  | -----  | -----
+0x0  | 0x10  | header
+0x10  | 0x10  | SU UUID?
+0x20  | 0x10  | user UUID 1
+0x30  | 0x10  | user UUID 2
+0x40  | 0x10  | user UUID 3
+0x50  | 0x10  | user UUID 4
+0x60  | 0x10  | user UUID 5
+0x70  | 0x10  | user UUID 6
+0x80  | 0x10  | user UUID 7
+0x90  | 0x10  | user UUID 8
+0xA0  | 0x10  | user UUID 9
