@@ -71,7 +71,7 @@ Offset | Length | What
 0xA0  | 0x10  | user UUID 9
 
 ### baas/[uuid].dat
-This file is what links a UUID to a NAS ID.
+This file is what links a local UUID to a NAS (Network Service Account) ID.
 I don't know much about it, except that the NAS ID is in a file that is named with the accounts UUID.
 
 The NASID is 8 bytes at 0x10.  Each byte is big-endian and the whole thing needs reversed.
