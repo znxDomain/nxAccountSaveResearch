@@ -58,7 +58,7 @@ Offset | Length | What
 
 Offset | Length | What
 -----  | -----  | -----
-0x0  | 0x10  | header
+0x0   | 0x10  | header
 0x10  | 0x10  | SU UUID?
 0x20  | 0x10  | user UUID 1
 0x30  | 0x10  | user UUID 2
@@ -75,3 +75,11 @@ This file is what links a local UUID to a NAS (Network Service Account) ID.
 I don't know much about it, except that the NAS ID is in a file that is named with the accounts UUID.
 
 The NASID is 8 bytes at 0x10.  Each byte is big-endian and the whole thing needs reversed.
+
+Bytes 0x20 - 0x28 contain the user id in reversed byte order,
+and bytes 0x28 - 0x50 contain the password in plain text.
+
+## Thanks
+
+@Kinnay https://github.com/Kinnay/NintendoClients/blob/master/example_smm2.py for details on baas/[uuid].dat
+
