@@ -11,12 +11,17 @@ proc string'reversebytes str {
 
 big_endian
 section "Header" {
+	# 0x00
     hex 8 "unknown"
     hex 8 "unknown"
+	# 0x10
 	set nas_id [hex 8 "nas_id_raw"]
 	set nas_id_corrected [string'reversebytes $nas_id]
-	entry "nas_id_corrected" [string range $nas_id_corrected 0 [string length $nas_id_corrected]-3]
+	entry "nas_id" [string range $nas_id_corrected 0 [string length $nas_id_corrected]-3]
     hex 8 "unknown"
-    hex 8 "unknown"
-    ascii 40 "unknown"
+	# 0x20
+	set user_id [hex 8 "baas_user_id_raw"]
+	set user_id_corrected [string'reversebytes $user_id]
+	entry "baas_user_id" [string range $user_id_corrected 0 [string length $user_id_corrected]-3]
+    ascii 40 "baas_password"
 }
